@@ -1,51 +1,86 @@
-<html>
-	<head>
-		<style>
-			body{
-				width: 100%;
-				margin-left: auto;
-				margin-right: auto;
-			}
-			h1{
-				margin: 10 px;
-			}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tytuł</title>
 
-			.videoDiv {
-				float: left;
-				width: 45%;
-				height: 45%;
-			}
-		</style>
-	</head>
-	<body>
-		<h2 style="text-align: center;">Model diaryzacyjny: 81% dokładności</h2>
-		<div class ="videoDiv">
-			<h3 style="text-align: center;">HCavil1</h3>
-			<video width="95%" height="95%" src="cut.mp4" controls id="video">
-				<track src="test.vtt" kind="captions" srclang="pl" default></track>
-			</video>
-		</div>
-		<div class ="videoDiv">
-			<h3 style="text-align: center;">HCavil2</h3>
-			<video width="95%" height="95%" src="cut.mp4" controls id="video">
-				<track src="test.vtt" kind="captions" srclang="pl" default></track>
-			</video>
-		</div>
-		<div style="clear: both; margin-top: 30px;">
-			<h2 style="text-align: center;">Model segmentowy: 79% dokładności</h2>
-		</div>
-		<div class ="videoDiv">
-			<h3 style="text-align: center;">HCavil3</h3>
-			<video width="95%" height="95%" src="cut.mp4" controls id="video">
-				<track src="test.vtt" kind="captions" srclang="pl" default></track>
-			</video>
-		</div>
-		<div class ="videoDiv">
-			<h3 style="text-align: center;">HCavil4</h3>
-			<video width="95%" height="95%" src="cut.mp4" controls id="video">
-				<track src="test.vtt" kind="captions" srclang="pl" default></track>
-			</video>
-		</div>
-	</body>
+
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" type="text/css">
+      
+</head>
+<body>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+
+
+
+    <div class="container-fluid">
+
+        <div class="row-flex justify-content-between">
+            <div class="col-md-12 text-center mt-5 mb-1" id="head_bar"><h1 class="display-4">Wyniki najlepszego modelu diaryzacyjnego</h1></div>
+        </div>
+
+        <div class="row mb-4">
+
+            <div class="col-md-6 text-center" id="title">
+                <h2>Najlepszy - HCavil (Acc: 99%)</h2>
+                <video width="95%" height="95%" src="video/HCavil001_2.mp4" controls id="video">
+                    <track src="subtitles/HCavil001_2.vtt" kind="captions" srclang="pl" default></track>
+                </video>
+            </div>
+            <div class="col-md-6 text-center " id="title">
+                <h2>Najgorszy - JKrupa (Acc: 53%)</h2>
+                <video width="95%" height="95%" src="video/JKrupa001_2.mp4" controls id="video">
+                    <track src="subtitles/JKrupa001_2.vtt" kind="captions" srclang="pl" default></track>
+                </video>
+            </div>
+        </div>
+
+        <div class="row-flex justify-content-between  ">
+            <div class="col-md-12 text-center mt-5 mb-1" id="head_bar"><h1 class="display-4">Wyniki najlpeszego modelu segmentowego</h1></div>
+        </div>
+
+        <div class="row mb-4" >
+
+            <div class="col-md-6 text-center" id="title" >
+                <h2>Najlepszy - JKrupa (Acc: 97%)</h2>
+                <video width="95%" height="95%" src="video/JKrupa005_2.mp4" controls id="video">
+                    <track src="subtitles/JKrupa005_2.vtt" kind="captions" srclang="pl" default></track>
+                </video>
+            </div>
+            <div class="col-md-6 text-center " id="title">
+                <h2>Najgorszy - BMars (Acc: 41%)</h2>
+                <video width="95%" height="95%" src="video/BMars001_2.mp4" controls id="video">
+                    <track src="subtitles/BMars001_2.vtt" kind="captions" srclang="pl" default></track>
+                </video>
+            </div>
+        </div>
+
+        <div class="row-flex justify-content-between  ">
+            <div class="col-md-12 text-center mt-5 mb-1" id="head_bar"><h1 class="display-4">Największe różnice między modelami</h1></div>
+        </div>
+
+        <div class="row mb-4" >
+
+            <div class="col-md-6 text-center" id="title" >
+                <h2>Model diaryzacyjny - GRamsay (Acc: 79%)</h2>
+                <video width="95%" height="95%" src="video/GRamsay003_3.mp4" controls id="video">
+                    <track src="subtitles/GRamsay003_3_diar.vtt" kind="captions" srclang="pl" default></track>
+                </video>
+            </div>
+            <div class="col-md-6 text-center " id="title">
+                <h2>Model segmentowy - GRamsay (Acc: 47%)</h2>
+                <video width="95%" height="95%" src="video/GRamsay003_3.mp4" controls id="video">
+                    <track src="subtitles/GRamsay003_3_seq.vtt" kind="captions" srclang="pl" default></track>
+                </video>
+            </div>
+        </div>
+        
+    </div>
+
+
+</body>
 </html>
-
